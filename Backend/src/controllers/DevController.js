@@ -43,12 +43,34 @@ module.exports = {
         return response.json(dev);
     },
 
-    async update(request, response){
+    /*async update(request, response){
 
+        const { github_username, techs } = request.query;
+
+        const newtechs = parseStringAsArray(techs);
+
+        const devs = await Dev.find({
+            github_username: {
+             $in: github_username,
+            },   
+        });
+
+        devs = Dev.update(
+            { github_username },
+            { 
+              $set: {
+                techs: newtechs,
+              }
+            }
+          )
+        
+        console.log(devs);
+
+        return response.json(devs);
     },
 
     async destroy(request, response){
         
-    },
+    },*/
 };
 
